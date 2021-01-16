@@ -8,11 +8,11 @@ In this bootcamp project, a fictional Colorado Board of Elections employee gave 
  4. Calculate the percentage of votes each candidate won.
  5. Determine the winner of the election based on popular vote.
 
-##Resources
+## Resources
    - Data Source: election_results.csv
    - Software: Python 3.7.6, Visual Studio Code, 1.52.1
    
-##Summary
+## Summary
 The analysis of the election shows that:
  - There were 369,711 votes cast in the election.
  - The candidates were:
@@ -26,8 +26,8 @@ The analysis of the election shows that:
  - The winner of the election was:
     - Diana DeGette who received 73.8% of the votes and 272,892 votes
 
-##Challenge Overview
+## Challenge Overview
 
-##Challenge Summary
+## Challenge Summary
 
  
