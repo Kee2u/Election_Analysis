@@ -43,16 +43,28 @@ with open(file_to_load) as election_data:
     
         #Add a vote to that candidate's count
         candidate_votes[candidate_name] += 1
+with open(file_to_save, "w") as txt_file:
+    election_results = (
+    f"\nElection Results\n"
+    f"----------------------------\n"
+    f"Total Votes: {total_votes}\n"
+    f"----------------------------\n")
+    print(election_results, end="")
 
+    txt_file.write(election_results)
+            
     #Iterate through the candidate list
     for candidate_name in candidate_votes:
         #retrieve vote count of a candidate
         votes = candidate_votes[candidate_name]
         #Calculate the percentage of votes
         vote_percentage = float(votes)/float(total_votes)*100
-        #Print the candidate name and percentage of votes
-        print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
-
+        candidate_results = (f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+        # Print each candidate, their voter count, and percentage to the terminal.
+        print(candidate_results)
+        #  Save the candidate results to our text file.
+        txt_file.write(candidate_results)
+        
         #Determine winning vote count and candidate
         #Determine if the votes is greater than the winning count
         if(votes>winning_count) and (vote_percentage > winning_percentage):
@@ -67,18 +79,8 @@ with open(file_to_load) as election_data:
     f"Winning Vote Count: {winning_count:,}\n"
     f"Winning Percentage: {winning_percentage:.1f}%\n"
     f"------------------------ \n")
-    print(winning_candidate_summary)   
-#Print the candidate list        
-#print(candidate_votes)
-# Create a filename variable to a direct or indirect path to the file.
-#with open(file_to_save,"w") as txt_file:
 
-#Write some data to the file
-    #txt_file.write("Counties in the Election\n--------------------------\nArapahoe\nDenver\nJefferson")
+    print(winning_candidate_summary) 
+    txt_file.write(winning_candidate_summary)  
 
 
-# 1. Total number of votes cast
-# 2. A complete list of candidates who received votes
-# 3. The percentage of votes each candidate won
-# 4. Total number of votes each candidate won
-# 5. The winner of the election based on popular vote.
