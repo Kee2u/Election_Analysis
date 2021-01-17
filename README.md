@@ -19,6 +19,7 @@ In this project, a Colorado Board of Elections employee tasked me with completin
 I used Python to extract and calculate the data I needed from election_results.csv. Then I sent the results to a text file. Here is the output:
 
 <img src ="https://github.com/Kee2u/Election_Analysis/blob/main/resources/Results.PNG?raw=true" width = "350">
+
 The analysis of the election shows that:
  - There were 369,711 votes cast in the election.
  
@@ -35,7 +36,7 @@ The analysis of the election shows that:
       - Raymon Anthony Doane received 3.1% of the votes and 11,606 votes
         
    - The winner of the election was:
-      -Diana DeGette who received 73.8% of the votes and 272,892 votes 
+      - Diana DeGette who received 73.8% of the votes and 272,892 votes 
        
 ### County Results
 
@@ -53,4 +54,8 @@ The analysis of the election shows that:
       - Denver with 306,055 voters and 82.8% of the total number of voters
 
 ## Election-Audit Summary
-This script can be used to calculate the winner and voter turnout by county for any election. Instead of counting votes by county, the election commission may be interested    
+This script can be used to calculate the winner and voter turnout by county for any election. However, it might require a few modifications:
+
+ 1. Instead of counting votes by county, the election commission may be interested in looking at votes by state or city. In this case, the word county will need to be changed in the print statements.
+ 
+ 2. The code is also relying on the candidate's name and county to be in specific columns in the csv file. If these values are in different columns in future datasets, the references in the code will need to be updated.
