@@ -58,4 +58,4 @@ This script can be used to calculate the winner and voter turnout by county for 
 
  1. Instead of counting votes by county, the election commission may be interested in looking at votes by state or city. In this case, the word county will need to be changed in the print statements.
  
- 2. The code is also relying on the candidate's name and county to be in specific columns in the csv file. If these values are in different columns in future datasets, the references in the code will need to be updated.
+ 2. The code is also relying on the candidate's name and county to be in specific columns in the csv file. If these values are in different columns in future datasets, the references in the code will need to be updated. 
